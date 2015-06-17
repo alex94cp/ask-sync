@@ -18,7 +18,7 @@ function formatMessage(message, opts) {
 		} else if (opts.nullable) {
 			options.push('[n/a]');
 		}
-		contents.push('(' + options.join('/') + ')');
+		contents.push(' (' + options.join('/') + ')');
 	} else {
 		if (opts.default !== undefined)
 			contents.push(' [' + opts.default + ']');
