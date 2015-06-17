@@ -1,0 +1,27 @@
+{
+  "name": "ask-sync",
+  "version": "0.1.0",
+  "description": "An easy to use library for interactive data input",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alex94puchades/ask-sync"
+  },
+  "keywords": [
+    "console",
+    "input",
+    "sync"
+  ],
+  "author": "Alejandro Caravaca Puchades <alex94puchades@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/alex94puchades/ask-sync/issues"
+  },
+  "dependencies": {
+    "lodash": "~3.9.3",
+    "readline-sync": "~1.2.19"
+  }
+}
