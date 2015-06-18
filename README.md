@@ -2,19 +2,22 @@
 
 An easy to use library for interactive data input
 
+## Installation
+
+```bash
+$ npm install ask-sync
+```
+
 ## Sample code
 
 ```js
 	var ask = require('ask-sync');
-	var settings = ask({
-		str: ask.String('str'),
-		int: ask.Integer('int'),
-		bool: ask.Boolean('bool'),
-		yesno: ask.String('opts', {
-			values: ['y','n'], default: 'y'
-		}),
-		optional: ask.String('optional', {
-			nullable: true
+	
+	var person = ask({
+		name: ask.String('Person name'),
+		age:  ask.Number('Person age'),
+		sex:  ask.String('Person sex', {
+			values: ['male','female']
 		}),
 	});
 ```
