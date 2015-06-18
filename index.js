@@ -103,6 +103,12 @@ exports.String = function(message, opts) {
 	};
 };
 
+exports.Date = function(message, opts) {
+	return function() {
+		return readData(message, opts, Date.parse);
+	};
+};
+
 exports.Variant = function(message, opts) {
 	return function() {
 		for (;;) { try {
