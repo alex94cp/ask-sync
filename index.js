@@ -77,7 +77,7 @@ function askObject(object, opts) {
 
 module.exports = exports = askObject;
 
-exports.Boolean = function(message, opts) {
+exports.boolean = function(message, opts) {
 	return function() {
 		return readData(message, opts, function(data) {
 			return data === 'true';
@@ -85,31 +85,31 @@ exports.Boolean = function(message, opts) {
 	};
 };
 
-exports.Integer = function(message, opts) {
-	return function() {
-		return readData(message, opts, parseInt);
-	};
-};
-
-exports.Number = exports.Float = function(message, opts) {
+exports.number = exports.float = function(message, opts) {
 	return function() {
 		return readData(message, opts, parseFloat);
 	};
 };
 
-exports.String = function(message, opts) {
+exports.integer = function(message, opts) {
+	return function() {
+		return readData(message, opts, parseInt);
+	};
+};
+
+exports.string = function(message, opts) {
 	return function() {
 		return readData(message, opts);
 	};
 };
 
-exports.Date = function(message, opts) {
+exports.date = function(message, opts) {
 	return function() {
 		return readData(message, opts, Date.parse);
 	};
 };
 
-exports.Variant = function(message, opts) {
+exports.variant = function(message, opts) {
 	return function() {
 		for (;;) { try {
 			return readData(message, opts, eval);

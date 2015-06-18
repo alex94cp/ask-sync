@@ -14,9 +14,9 @@ $ npm install ask-sync
 	var ask = require('ask-sync');
 	
 	var person = ask({
-		name: ask.String('Person name'),
-		age:  ask.Number('Person age'),
-		sex:  ask.String('Person sex', {
+		name: ask.string('Person name'),
+		age:  ask.number('Person age'),
+		sex:  ask.string('Person sex', {
 			values: ['male','female']
 		}),
 	});
